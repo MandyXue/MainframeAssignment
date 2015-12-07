@@ -1,0 +1,15 @@
+//MYPROC PROC                                                           00030001
+//PSTEP1 EXEC PGM=IEBGENER                                              00040001
+//SYSPRINT DD SYSOUT=*                                                  00050001
+//SYSUT1 DD DSN=ST0173.SST0173.TXT3,DISP=SHR                            00060004
+//SYSUT2 DD DSN=&OUTDS,DISP=(NEW,CATLG,DELETE),                         00070003
+//    SPACE=(TRK,(1,1,1)),VOL=SER=VPD91C,                               00080001
+//    RECFM=FB,LRECL=80,UNIT=3390                                       00090001
+//SYSIN DD *                                                            00100001
+   GENERATE MAXNAME=3,MAXGPS=2                                          00110001
+   MEMBER NAME=MEMBER1                                                  00120001
+     RECORD IDENT=(6,'013224',1)                                        00130001
+   MEMBER NAME=MEMBER2                                                  00140001
+     RECORD IDENT=(6,'023218',1)                                        00150001
+   MEMBER NAME=MEMBER3                                                  00160001
+//    PEND                                                              00170001

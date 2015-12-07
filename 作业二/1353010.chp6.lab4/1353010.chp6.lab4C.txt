@@ -1,0 +1,12 @@
+//ST017364 JOB ACCT#,ST0173,NOTIFY=ST0173,MSGLEVEL=(1,1)                00000100
+//MYLIB JCLLIB ORDER=ST0173.PROC.LIB
+//STEP1 EXEC PGM=SORT                                                   00000200
+//SORTIN DD DSN=ST0173.EXER.TXT,DISP=SHR                                00000300
+//SORTOUT DD DSN=ST0173.SST0173.TXT3,DISP=(NEW,CATLG,DELETE),           00000310
+//    SPACE=(TRK,(1,1)),VOL=SER=VPD91C,                                 00000400
+//    RECFM=FB,LRECL=80,UNIT=3390                                       00000500
+//SYSOUT DD SYSOUT=*                                                    00000600
+//SYSIN DD *                                                            00000700
+  SORT FIELDS=(1,6,CH,A)                                                00000800
+/*                                                                      00000900
+//PROCSTEP EXEC PROC=MYPROC,OUTDS=ST0173.SST0173.P03

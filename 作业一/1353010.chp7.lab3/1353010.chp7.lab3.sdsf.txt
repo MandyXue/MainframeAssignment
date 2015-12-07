@@ -1,0 +1,1512 @@
+1                   J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  S V S C J E S 2        
+0 
+ 23.44.18 JOB01788 ---- SATURDAY,  07 NOV 2015 ----
+ 23.44.18 JOB01788  IRR010I  USERID ST0173   IS ASSIGNED TO THIS JOB.
+ 23.44.18 JOB01788  ICH70001I ST0173   LAST ACCESS AT 23:42:39 ON SATURDAY, NOVEMBER 7, 2015
+ 23.44.18 JOB01788  $HASP373 ST017373 STARTED - INIT 1    - CLASS A - SYS S0W1
+ 23.44.19 JOB01788  -                                      -----TIMINGS (MINS.)------                          -----PAGING COUNTS----
+ 23.44.19 JOB01788  -STEPNAME PROCSTEP    RC   EXCP   CONN       TCB       SRB  CLOCK          SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 23.44.19 JOB01788  -LISTVTOC             00    188     56       .00       .00     .0            46  BATCH        0     0     0     0
+ 23.44.19 JOB01788  -ST017373 ENDED.  NAME-                     TOTAL TCB CPU TIME=      .00 TOTAL ELAPSED TIME=    .0
+ 23.44.19 JOB01788  $HASP395 ST017373 ENDED
+0------ JES2 JOB STATISTICS ------
+-  07 NOV 2015 JOB EXECUTION DATE
+-            8 CARDS READ
+-        1,512 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-          110 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //ST017373 JOB NOTIFY=ST0173,MSGLEVEL=(1,1)                             JOB01788
+         2 //LISTVTOC EXEC PGM=IEHLIST                                             00020000
+         3 //SYSPRINT DD SYSOUT=*                                                  00030000
+         4 //DD1 DD DISP=OLD,                                                      00040000
+           // UNIT=3390,VOL=SER=VPMVSC                                             00050000
+         5 //SYSIN DD *                                                            00060000
+ ICH70001I ST0173   LAST ACCESS AT 23:42:39 ON SATURDAY, NOVEMBER 7, 2015
+ IEF236I ALLOC. FOR ST017373 LISTVTOC
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I 8605 ALLOCATED TO DD1
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I ST017373 LISTVTOC - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   ST0173.ST017373.JOB01788.D0000102.?          SYSOUT        
+ IEF285I   SYS15311.T234418.RA000.ST017373.R0101485     KEPT          
+ IEF285I   VOL SER NOS= VPMVSC.                            
+ IEF285I   ST0173.ST017373.JOB01788.D0000101.?          SYSIN         
+ IEF373I STEP/LISTVTOC/START 2015311.2344
+ IEF032I STEP/LISTVTOC/STOP  2015311.2344 
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:    96K  SYS:   236K  EXT:        8K  SYS:    11152K
+ IEF375I  JOB/ST017373/START 2015311.2344
+ IEF033I  JOB/ST017373/STOP  2015311.2344 
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    1               
+-DATE: 2015.311  TIME: 23.44.18                                                                                          
+                 CONTENTS OF VTOC ON VOL VPMVSC  <THIS VOLUME IS NOT SMS MANAGED>                                        
+    THERE IS A  1 LEVEL VTOC INDEX                                                                                       
+    DATA SETS ARE LISTED IN ALPHANUMERIC ORDER                                                                           
+0 FORMAT 4 DSCB NO AVAIL/MAX DSCB /MAX DIRECT  NO AVAIL  NEXT ALT   FORMAT 6  LAST FMT 1     VTOC EXTENT        THIS DSCB
+            VI   DSCBS   PER TRK  BLK PER TRK  ALT TRK   TRK(C-H)   (C-H-R)   DSCB(C-H-R)/LOW(C-H) HIGH(C-H)    (C-H-R)  
+            89     742       50         45         0        0   0              1  14  50    1   0     1  14     1   0   1
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ DSNA10.DBAG.ARCLOG1.D15032.T0404458.A0000085  VPMVSC      1  2015.032  2042.169  2015.032    1  PS   FB     02    24576 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4096            RECS             180        24576AV        719   2  7038                            1   0  29
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   424 10      472  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE              0 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ DSNA10.DBAG.ARCLOG1.D15043.T1045461.A0000086  VPMVSC      1  2015.043  2042.180  2015.043    1  PS   FB     02    24576 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4096            RECS             180        24576AV        719   2  7038                            1   0  50
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   472 10      520  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE              0 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ DSNA10.DBAG.ARCLOG1.D15055.T0010465.B0000087  VPMVSC      1  2015.055  2042.192  2015.055    1  PS   VB     02    24576 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4093            RECS             504        24576AV         64   2 23834                            1   1  20
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   520 10      524 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE              0 EMPTY BLOCK(S).                      
+0                                                                                                                        
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    2               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ DSNA10.DBAG.ARCLOG1.D15151.T1350290.A0000090  VPMVSC      1  2015.151  2042.288  2015.151    1  PS   FB     02    24576 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4096            RECS             180        24576AV        719   2  7038                            1   1  32
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   531 10      579  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE              0 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ DSNA10.DBAG.ARCLOG1.D15178.T0037406.B0000091  VPMVSC      1  2015.178  2042.315  2015.178    1  PS   VB     02    24576 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4093            RECS             504        24576AV         64   2 23834                            1   1  46
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   595  0      599  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE              0 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ DSNA10.DBAG.ARCLOG1.D15229.T0019479.A0000093  VPMVSC      1  2015.229  2043.001  2015.229    1  PS   FB     02    24576 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4096            RECS             180        24576AV        719   2  7038                            1   1  47
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   603 10      651  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE              0 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ DSNA10.DBAG.ARCLOG1.D15229.T0019479.B0000093  VPMVSC      1  2015.229  2043.001  2015.229    1  PS   VB     02    24576 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4093            RECS             504        24576AV         64   2 23834                            1   1  21
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   599  5      603  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE              0 EMPTY BLOCK(S).                      
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    3               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ DSNA10.DBAG.ARCLOG1.D15262.T1834487.A0000096  VPMVSC      1  2015.262  2043.034  2015.262    1  PS   FB     02    24576 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4096            RECS             180        24576AV        719   2  7038                            1   1  29
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   652  4      700  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE              0 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ECS.REC                                       VPMVSC      1  2015.307    00.000  2015.307    1  PS   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               1                         0   1 57936                            1   2  28
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   581  7      581  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ FJS.JCL                                       VPMVSC      1  2015.307    00.000  2015.308    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            CYLS               1                         0  45  9316                            1   2  14
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   704  0      705 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE     1 EMPTY CYLINDER(S) PLUS 14 EMPTY TRACK(S).     
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ FJS.LOAD                                      VPMVSC      1  2015.308    00.000  2015.308    1  PO   U      00      400 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             200            TRKS               5                         2  66  4250                            1   2  40
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   714  4      714 13                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          7 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    4               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ GZ99.S0W1.SPFLOG1.LIST                        VPMVSC      1  2015.170    00.000  2015.172    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0   7 53516                            1   1  35
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   580  5      580 13                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            641 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ HJ.S0W1.ISPF.ISPPROF                          VPMVSC      1  2014.355    00.000  2014.355    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  20 26758                            1   0  13
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     3  4        3  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ IBMUSER.DB2.INPUT                             VPMVSC      1  2015.017    00.000  2015.143    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  26 33864                            1   0  16
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   388  5      388 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ IBMUSER.HCD.TRACE                             VPMVSC      1  2013.321    00.000    00.000    1  PS   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            RECS              20         6160AV          0   0 58786                            1   0   4
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     3  0        3  2                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             24 EMPTY BLOCK(S).                      
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    5               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ IBMUSR1.HCD.TERM                              VPMVSC      1  2014.348    00.000    00.000    1  PS   FB     00     1600 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            RECS              10         1600AV          0   0 58786                            1   0  12
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   388  4      388  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             25 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ IBMUSR1.HCD.TRACE                             VPMVSC      1  2014.348    00.000    00.000    1  PS   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            RECS              20         6160AV          0   0 58786                            1   0  11
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   388  1      388  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             24 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ SRH.S0W1.ISPF.ISPPROF                         VPMVSC      1  2014.355    00.000  2014.358    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  15 37638                            1   0  14
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     3  6        3  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ STTST1.S0W1.ISPF.ISPPROF                      VPMVSC      1  2014.357    00.000  2014.359    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1   6 44540                            1   0  15
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     3 10        3 11                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    6               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST001.DBRMLIB.DATA                            VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  15 42058                            1   1  14
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   415  1      415 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST001.DB2.INCLUDE                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  22 36006                            1   1  31
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   423  5      423 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST001.DB2.INPUT2                              VPMVSC      1  2015.026    00.000  2015.027    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  25 33966                            1   0  23
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   395  1      395 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST001.DB2.JCL                                 VPMVSC      1  2015.028    00.000  2015.257    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         1  45 20706                            1   1   1
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   407 11      408  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          8 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    7               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST001.DB2.OUTPUT2                             VPMVSC      1  2015.026    00.000  2015.027    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4092            TRKS              10                         0  13 19720                            1   0  27
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   395 11      396  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST001.RUNLIB.LOAD                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   U      00      256 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         3   9 52020                            1   1  26
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   422  0      422  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          6 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST002.S0W1.ISPF.ISPPROF                       VPMVSC      1  2014.355    00.000  2015.174    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1  11 36210                            1   0   8
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     3  8        3  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST003.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.026    00.000  2015.028    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1   3 55114                            1   0  24
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   393  9      393 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    8               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST005.DB2.OUTPUT01                            VPMVSC      1  2015.028    00.000  2015.028    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4092            TRKS              10                         0  11 25330                            1   1  13
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   414  6      415  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST005.RUNLIB.LOAD                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   U      00      256 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         3   9 52020                            1   1  24
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   421  0      421  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          6 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST005.S0W1.SPFTEMP0.CNTL                      VPMVSC      1  2015.028    00.000  2015.028    1  PS   FB     00      800 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            RECS             100          800AV          0  10 44166                            1   1   7
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   397  5      397  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             29 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST006.DB2.JCL                                 VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         1  45 20706                            1   1   5
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   409 11      410  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          8 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE    9               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST006.DB2.OUTPUT                              VPMVSC      1  2015.026    00.000  2015.028    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4092            TRKS              10                         0  11 25330                            1   0  25
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   393 11      394  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST006.DB2.OUTPUT02                            VPMVSC      1  2015.027    00.000    00.000    1  PS   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0   0 58786                            1   0  49
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   405 13      406  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE         10 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST006.DB2.SRC                                 VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  61  3026                            1   1  23
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   420  5      420 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST007.DBRMLIB.DATA                            VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  23 36074                            1   1  10
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   412  6      413  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   10               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST007.DB2.INPUT                               VPMVSC      1  2015.026    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  11 45186                            1   0  26
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   394  6      395  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST007.DB2.JCL                                 VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         1  45 20706                            1   1   6
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   410  6      411  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          8 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST007.DB2.OUTPUT01                            VPMVSC      1  2015.027    00.000  2015.028    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4092            TRKS              10                         0  11 25364                            1   0  35
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   398  4      398 13                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST007.DB2.SRC                                 VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  61  3026                            1   1  27
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   422 10      423  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   11               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST008.DB2.INPUT01                             VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  35 26146                            1   0  36
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   398 14      399  8                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST009.DB2.INCLUDE                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  22 36006                            1   1  11
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   413  1      413 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST009.DB2.SRC                                 VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         2   3 56406                            1   1  12
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   413 11      414  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          7 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST012.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1   6 41786                            1   0  28
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   393  0      393  1                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   12               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0124.JCL                                    VPMVSC      1  2015.310    00.000  2015.310    1  PS   FB     00      800 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               5                         0   1 57460                            1   2  39
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   703  7      703 11                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          4 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0128.FJS.DATA                               VPMVSC      1  2015.310    00.000  2015.311    1  PS   FB     00      400 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               5                         0   2 56610                            1   2  43
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   710  5      710  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          4 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0128.JCL                                    VPMVSC      1  2015.310    00.000  2015.311    1  PS   FB     00      400 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               5                         0   5 53584                            1   2  45
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   710 10      710 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          4 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0128.JCL2                                   VPMVSC      1  2015.310    00.000  2015.311    1  PS   FB     00      400 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               5                         0   3 55862                            1   2  44
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   713 10      713 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          4 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   13               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0128.JCL3                                   VPMVSC      1  2015.311    00.000  2015.311    1  PS   FB     00      400 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               5                         0   3 55624                            1   2  47
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   714 14      715  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          4 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0128.MDATA                                  VPMVSC      1  2015.311    00.000  2015.311    1  PO   FB     00      400 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               5                         0  11 47362                            1   2  46
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   707  7      707 11                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          4 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0128.S0W1.SPF1.LIST                         VPMVSC      1  2015.311    00.000  2015.311    1  PS   FB  A  00     3146 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             121            RECS             462         3146AV          0   1 54876                            1   2  41
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   716  5      717  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            239 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0131.DATA                                   VPMVSC      1  2015.307    00.000  2015.307    1  PO   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               1                         0   4 54638   25                       1   2  37
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   703 14      703 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   14               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0132.DATA                                   VPMVSC      1  2015.307    00.000  2015.308    5  PO   FB  A  00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               1                         4  13 45118   73        1   2  21      1   2   9
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)    NO  LOW(C-H)   HIGH(C-H)    NO  LOW(C-H)   HIGH(C-H)                   
+                        0   407 10      407 10      1   703  4      703  4      2   703  6      703  6                   
+                        3   393  8      393  8      4   397  8      397  8                                               
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0132.JCL                                    VPMVSC      1  2015.302    00.000  2015.308    1  PO   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               5                         3  34 16320                            1   2  10
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   700  5      700 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          6 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0132.SDSFOUT                                VPMVSC      1  2015.308    00.000  2015.308    1  PO   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               5                         3   2 56848                            1   2  38
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   715  8      716  2                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          6 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0132.ST0132.DATA                            VPMVSC      1  2015.302    00.000  2015.308    1  PS   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0   1 58038                            1   2   8
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   525 14      526  0                                                                           
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   15               
+-                                ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0133.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.307    00.000  2015.307    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  19 23222                            1   2  26
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   590 13      590 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0134.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.300    00.000  2015.300    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  15 37638                            1   2   7
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   525 12      525 13                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0135.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.300    00.000  2015.307    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  13 35564                            1   2   3
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   525  0      525  1                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0139.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.307    00.000  2015.307    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0   9 47600                            1   2  25
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   16               
+-                       0   581  5      581  6                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0140.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.304    00.000  2015.311    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1   3 52156                            1   2  11
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   526  1      526  2                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0142.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.300    00.000  2015.308    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1   2 57188                            1   1  30
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   407  2      407  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0143.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.307    00.000  2015.310    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  30  5100                            1   2  29
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   702  5      702  6                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   17               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0144.S0W1.SPFLOG1.LIST                      VPMVSC      1  2015.309    00.000  2015.309    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0  10 51238                            1   2  19
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   709 11      710  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            638 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0149.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.300    00.000  2015.311    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  26  8602                            1   1  48
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   407  4      407  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST015.S0W1.SPFLOG1.LIST                       VPMVSC      1  2015.028    00.000  2015.028    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0  49 22066                            1   0  31
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   406  8      407  1                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            603 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0150.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.300    00.000  2015.307    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  30  3060                            1   1  49
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   407  6      407  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   18               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0153.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.300    00.000  2015.307    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  20 27846                            1   2   2
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   407  8      407  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0155.S0W1.SPFLOG1.LIST                      VPMVSC      1  2015.307    00.000  2015.307    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0   4 55760                            1   2  31
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   707 13      708  6                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            644 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0158.ST0158.JCL                             VPMVSC      1  2015.300    00.000    00.000    1  PO   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+    B         80            TRKS               5                         0  11 45186                            1   2   6
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   525  2      525 11                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST016.DB2.INCLUDE                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  22 36006                            1   1  16
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   416  6      417  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   19               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST016.DB2.INPUT01                             VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  17 40426                            1   0  38
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   400  4      400 13                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST016.DB2.JCL                                 VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         1  45 20706                            1   1  17
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   417  1      417 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          8 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST016.DB2.OUTPUT01                            VPMVSC      1  2015.027    00.000  2015.028    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4092            TRKS              10                         0  11 25330                            1   0  45
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   403 12      404  6                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST016.DB2.SRC                                 VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  61  3026                            1   1  18
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   417 11      418  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   20               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST016.RUNLIB.LOAD                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   U      00      256 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         3   9 52020                            1   1  19
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   418  6      419  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          6 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0161.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.307    00.000  2015.311    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  19 25432                            1   2  18
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   526  3      526  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0163.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.307    00.000  2015.307    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  15 37128                            1   2  35
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   707  5      707  6                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0165.S0W1.SPFTEMP0.CNTL                     VPMVSC      1  2015.311    00.000  2015.311    1  PS   FB     00      800 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            RECS             100          800AV          0   1 57460                            1   2  15
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     3  3        3  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             38 EMPTY BLOCK(S).                      
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   21               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0169.DATA                                   VPMVSC      1  2015.307    00.000    00.000    1  UN   *                0 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+               0            RECS              24         8192AV          0   0 58786                            1   2  27
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   419  9      419  9                                                                           
+                                 ----UNABLE TO CALCULATE EMPTY SPACE.                                                    
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0169.JCL                                    VPMVSC      1  2015.307    00.000  2015.307    1  PO   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               5                         0  21 37128                            1   2  23
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   708  7      709  1                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0169.ST0169.LIST                            VPMVSC      1  2015.300    00.000  2015.300    1  PS   VB  A  00     3120 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             240            RECS             500         3120AV          0   1 57970                            1   2   5
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   702  8      702  8                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             14 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST017.DB2.INPUT                               VPMVSC      1  2015.027    00.000    00.000    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  11 45186                            1   0  41
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   402  3      402 12                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   22               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST017.DB2.INPUT01                             VPMVSC      1  2015.027    00.000  2015.027    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  14 42806                            1   0  37
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   399  9      400  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST017.DB2.OUTPUT01                            VPMVSC      1  2015.027    00.000  2015.027    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4092            TRKS              10                         1   4 47362                            1   0  42
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   402 13      403  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          8 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0170.LIST22                                 VPMVSC      1  2015.308    00.000  2015.308    1  PS   VB  A  00     3120 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             240            RECS             500         3120AV          0   2 53482                            1   2  42
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   716  4      716  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             13 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0173.DATA                                   VPMVSC      1  2015.311    00.000  2015.311    1  PO   FB  A  00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               5                         0  45 11526                            1   2  22
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   706 10      707  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   23               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0173.IEBGENER                               VPMVSC      1  2015.311    00.000  2015.311    1  PS   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               1                         0   1 57936                            1   2  16
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   701 10      701 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0173.JCL                                    VPMVSC      1  2015.307    00.000  2015.311    1  PO   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               5                         0  53  7820                            1   2  17
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   702  9      703  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0173.JCL.EXAMPLE                            VPMVSC      1  2015.307    00.000  2015.311    1  PO   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS               5                         0  35 20944                            1   2  20
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   706  0      706  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0173.LIST                                   VPMVSC      1  2015.300    00.000  2015.300    1  PS   VB  A  00     3120 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             240            RECS             500         3120AV          0   1 57970                            1   2   4
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   700  4      700  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             14 EMPTY BLOCK(S).                      
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   24               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0173.S0W1.SPFLOG4.LIST                      VPMVSC      1  2015.311    00.000  2015.311    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0   0 58786                            1   2  30
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   701 11      702  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            648 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0174.S0W1.SPFLOG1.LIST                      VPMVSC      1  2015.307    00.000  2015.307    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0  10 51204                            1   2  36
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   709  2      709 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            638 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0175.COBOL                                  VPMVSC      1  2015.306    00.000  2015.306    1  PO   FB     00     8000 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+     I        80            TRKS               1                                                                1   2  12
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   701  0      701  4                                                                           
+                                 ----UNABLE TO CALCULATE EMPTY SPACE.                                                    
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0175.TEST                                   VPMVSC      1  2015.306    00.000    00.000    1  PS   FB     00     8000 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0   0 58786                            1   2  13
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   701  5      701  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          5 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   25               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST0179.S0W1.ISPF.ISPPROF                      VPMVSC      1  2015.257    00.000  2015.257    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  20 26520                            1   1  50
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   581  3      581  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST020.DBRMLIB.DATA                            VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  11 45186                            1   1  15
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   415 11      416  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST020.DB2.INPUT01                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  14 42806                            1   1  22
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   419 10      420  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST020.DB2.OUTPUT01                            VPMVSC      1  2015.028    00.000    00.000    1  PS   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0   0 58786                            1   1  28
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   411  1      411 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE         10 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   26               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST024.S0W1.SPFLOG1.LIST                       VPMVSC      1  2015.027    00.000  2015.027    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0   5 54944                            1   0  46
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   404  7      405  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            643 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST025.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  15 37638                            1   0  30
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   393  2      393  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST026.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1   9 37400                            1   0  32
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   393  4      393  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST027.DB2.INCLUDE                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  22 36006                            1   1   3
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   408  6      409  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   27               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST027.DB2.INPUT                               VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  32 28526                            1   0  47
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   405  1      405 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST027.DB2.OUTPUT01                            VPMVSC      1  2015.027    00.000  2015.028    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4092            RECS              10         8192AV          0  11 25296                            1   0  48
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   405 11      405 12                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE             17 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST027.DB2.SRC                                 VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         1  22 40256                            1   1   4
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   409  1      409 10                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          8 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST027.RUNLIB.LOAD                             VPMVSC      1  2015.028    00.000  2015.028    1  PO   U      00      256 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         5  75   340                            1   1   8
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   411 11      412  5                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          4 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   28               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST028.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  17 35768                            1   0  33
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   393  6      393  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST029.DB2.INPUT01                             VPMVSC      1  2015.027    00.000    00.000    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  11 45186                            1   0  40
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   401  8      402  2                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST030.S0W1.SPFLOG1.LIST                       VPMVSC      1  2015.027    00.000  2015.027    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0   5 54944                            1   0  39
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   400 14      401  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            643 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST031.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.027    00.000    00.000    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0   3 55522                            1   0  43
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   403  8      403  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   29               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST034.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.028    00.000    00.000    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0   3 55522                            1   1   2
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   397  1      397  2                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST035.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  23 12342                            1   0  44
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   403 10      403 11                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST036.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.028    00.000  2015.028    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0   9 47600                            1   1   9
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   397  3      397  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST039.SPF100.IEBCOPY                          VPMVSC      1  2015.028    00.000  2015.028    1  PS   FB  A  20    27951 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R         121            TRKS               5                         0   1 55998                            1   1  25
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   421 10      421 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          4 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   30               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST040.DB2.INPUT                               VPMVSC      1  2015.017    00.000  2015.017    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  17 40426                            1   0  19
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   390  5      390 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST040.DB2.OUTPUT                              VPMVSC      1  2015.017    00.000  2015.017    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            4092            TRKS              10                         0  11 25330                            1   0  20
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   391  0      391  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST040.DB2.SRC                                 VPMVSC      1  2015.017    00.000  2015.017    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  61  3026                            1   0  21
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   391 10      392  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST040.RUNLIB.LOAD                             VPMVSC      1  2015.017    00.000  2015.017    1  PO   U      00      256 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         3   9 52020                            1   0  22
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   392  5      392 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          6 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   31               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST118.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.176    00.000  2015.258    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  21 20808                            1   1  36
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   419  5      419  6                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST119.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.175    00.000  2015.261    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1   6 45050                            1   1  38
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   419  3      419  4                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST119.S0W1.SPFLOG9.LIST                       VPMVSC      1  2015.257    00.000  2015.257    1  PS   V   A  00      129 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             125            RECS             582          129AV          0   5 54978                            1   2   1
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   651 10      652  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE            643 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ ST120.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.175    00.000  2015.310    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1  12 28866                            1   1  34
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   419  1      419  2                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   32               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ SYS1.VTOCIX.VPMVSC                            VPMVSC      1  1992.026    00.000    00.000    1  PS   F      00     2048 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+            2048            TRKS CONTIG        0                        13  21     0                            1   0   3
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     0  1        0 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ SYS1.VVDS.VVPMVSC                             VPMVSC      1  1992.026    00.000    00.000    1  VS   *      80     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+               0            TRKS              15                                                                1   0   5
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     2  0        2 14                                                                           
+                                 ----UNABLE TO CALCULATE EMPTY SPACE.                                                    
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ SYS8.IODF02.WORK                              VPMVSC      1  2013.322  1999.365  2014.348    1  VS   U      80     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+               0            CYLS               0                                                                1   0   7
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     4  0      195 14                                                                           
+                                 ----UNABLE TO CALCULATE EMPTY SPACE.                                                    
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ SYS8.IODF03.WORK                              VPMVSC      1  2014.198  1999.365  2014.348    1  VS   U      80     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+               0            CYLS               0                                                                1   0   6
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   196  0      387 14                                                                           
+                                 ----UNABLE TO CALCULATE EMPTY SPACE.                                                    
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   33               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TE001.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.174    00.000  2015.174    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  30  3706                            1   1  37
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   397  6      397  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TE005.S0W1.ISPF.ISPPROF                       VPMVSC      1  2015.176    00.000  2015.176    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         0  19 25024                            1   1  39
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   419  7      419  8                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TE006.COBOL.JCL                               VPMVSC      1  2015.177    00.000  2015.177    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            CYLS               1                         0  25 29070                            1   1  43
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   591  0      592 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE     1 EMPTY CYLINDER(S) PLUS 14 EMPTY TRACK(S).     
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TE006.COBOL.SRC                               VPMVSC      1  2015.177    00.000  2015.177    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            CYLS               1                         0  23 30328                            1   1  44
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   593  0      594 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE     1 EMPTY CYLINDER(S) PLUS 14 EMPTY TRACK(S).     
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   34               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.COBOL.DATA                                VPMVSC      1  2015.308    00.000  2015.310    1  PO   FB  A  00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            CYLS               1                         1  58 13362                            1   2  24
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   711  0      712 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE     1 EMPTY CYLINDER(S) PLUS 13 EMPTY TRACK(S).     
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.COBOL.LOAD                                VPMVSC      1  2015.308    00.000  2015.310    1  PO   U      00      400 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             200            TRKS               5                         7  29 35292                            1   2  33
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   713  0      713  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          2 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.DB2.INCLUDE                               VPMVSC      1  2015.017    00.000  2015.181    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         1  48 18530                            1   0  17
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   389  0      389  9                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          8 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.DB2.INPUT01                               VPMVSC      1  2015.027    00.000  2015.028    1  PO   FB     00      160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                         0  14 42806                            1   0  34
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   397  9      398  3                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          9 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   35               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.DSNULOA.CNTL                              VPMVSC      1  2015.177    00.000  2015.180    1  PS   FB     00      800 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               2                         0  10 43894                            1   1  45
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   581  1      581  2                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.DSNUREC.CNTL                              VPMVSC      1  2015.180    00.000  2015.180    1  PS   FB     00      800 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               2                         0   2 56134                            1   1  42
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   580 14      581  0                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          1 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.EMP                                       VPMVSC      1  2015.177    00.000  2015.306    1  PS   VB     00     4096 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             111            TRKS              10                         0   1 58004                            1   1  40
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   584  3      587  7                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE         49 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.EMPPUN                                    VPMVSC      1  2015.177    00.000  2015.180    1  PS   FB     00    27920 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+   R          80            TRKS              10                         0   1 54026                            1   1  41
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0   587  8      590 12                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE         49 EMPTY TRACK(S).                          
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   36               
+-                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ TJF.RUNLIB.LOAD                               VPMVSC      1  2015.017    00.000  2015.181   16  PO   U      00      256 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS              10                       159   8 52802             1   1  33      1   0  18
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)    NO  LOW(C-H)   HIGH(C-H)    NO  LOW(C-H)   HIGH(C-H)                   
+                        0   389 10      390  4      1   396  6      397  0      2   424  0      424  9                   
+                        3   526  5      526 14      4   527  0      527  9      5   527 10      528  4                   
+                        6   528  5      528 14      7   529  0      529  9      8   529 10      530  4                   
+                        9   530  5      530 14     10   531  0      531  9     11   579 10      580  4                   
+                       12   581  8      582  2     13   582  3      582 12     14   582 13      583  7                   
+                       15   583  8      584  2                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ XP99.DATE                                     VPMVSC      1  2014.346    00.000  2014.359    2  PS   VB     00     6233 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+             133            RECS              24         8192AV          1   2 49504                            1   0   9
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)    NO  LOW(C-H)   HIGH(C-H)                                               
+                        0     3 12        3 12      1   388  0      388  0                                               
+                                 ----ON THE ABOVE DATA SET,THERE ARE              7 EMPTY BLOCK(S).                      
+0                                                                                                                        
+0---------------DATA SET NAME----------------  SER NO  SEQNO  DATE.CRE  DATE.EXP  DATE.REF  EXT DSORG RECFM OPTCD BLKSIZE
+ XP99.S0W1.ISPF.ISPPROF                        VPMVSC      1  2014.346    00.000  2015.297    1  PO   FB     00     6160 
+0SMS.IND   LRECL  KEYLEN  INITIAL ALLOC  2ND ALLOC    EXTEND       LAST BLK(T-R-L)  DIR.REM  F2 OR F3(C-H-R)  DSCB(C-H-R)
+              80            TRKS               1                         1  17 24446                            1   0  10
+ EATTR                                                                                                                   
+ NS                                                                                                                      
+0            EXTENTS  NO  LOW(C-H)   HIGH(C-H)                                                                           
+                        0     3 13        3 14                                                                           
+                                 ----ON THE ABOVE DATA SET,THERE ARE          0 EMPTY TRACK(S).                          
+0                                                                                                                        
+0VPSM               A = NUMBER OF TRKS IN ADDITION TO FULL CYLS IN THE EXTENT                                            
+        TRK  FULL          TRK  FULL          TRK  FULL          TRK  FULL          TRK  FULL          TRK  FULL         
+       ADDR  CYLS   A     ADDR  CYLS   A     ADDR  CYLS   A     ADDR  CYLS   A     ADDR  CYLS   A     ADDR  CYLS   A     
+       10537      0  1    10550      0  1    10557      0  2    10617      0  1    10710      0  4    10729      0  4    
+       10743      0  1    10761   9299  9                                                                                
+1                              SYSTEMS SUPPORT UTILITIES---IEHLIST                               PAGE   37               
+- THERE ARE  9299 EMPTY CYLINDERS PLUS    23  EMPTY TRACKS ON THIS VOLUME                                                
+  THERE ARE  9299 EMPTY CYLINDERS PLUS    23  EMPTY TRACKS FROM THE TRACK-MANAGED SPACE                                  
+  THERE ARE     605 BLANK DSCBS IN THE VTOC ON THIS VOLUME                                                               
+  THERE ARE    278 UNALLOCATED VIRS IN  THE INDEX                                                                        

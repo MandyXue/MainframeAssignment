@@ -1,0 +1,628 @@
+1                   J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  S V S C J E S 2        
+0 
+ 20.25.38 JOB08882 ---- SATURDAY,  05 DEC 2015 ----
+ 20.25.38 JOB08882  IRR010I  USERID ST0173   IS ASSIGNED TO THIS JOB.
+ 20.25.38 JOB08882  IEF677I WARNING MESSAGE(S) FOR JOB ST01731  ISSUED
+ 20.25.38 JOB08882  ICH70001I ST0173   LAST ACCESS AT 20:24:51 ON SATURDAY, DECEMBER 5, 2015
+ 20.25.38 JOB08882  $HASP373 ST01731  STARTED - INIT 3    - CLASS A - SYS S0W1
+ 20.25.40 JOB08882  -                                      -----TIMINGS (MINS.)------                          -----PAGING COUNTS----
+ 20.25.40 JOB08882  -STEPNAME PROCSTEP    RC   EXCP   CONN       TCB       SRB  CLOCK          SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 20.25.40 JOB08882  -STEP1    COBOL       00    195     35       .00       .00     .0            17  BATCH        0     0     0     0
+ 20.25.40 JOB08882  -STEP1    LKED        00    152     27       .00       .00     .0            15  BATCH        0     0     0     0
+ 20.25.40 JOB08882  -STEP1    GO          00     39     29       .00       .00     .0             4  BATCH        0     0     0     0
+ 20.25.40 JOB08882  -ST01731  ENDED.  NAME-                     TOTAL TCB CPU TIME=      .00 TOTAL ELAPSED TIME=    .0
+ 20.25.40 JOB08882  $HASP395 ST01731  ENDED
+0------ JES2 JOB STATISTICS ------
+-  05 DEC 2015 JOB EXECUTION DATE
+-            6 CARDS READ
+-          628 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           38 SYSOUT SPOOL KBYTES
+-         0.03 MINUTES EXECUTION TIME
+         1 //ST01731 JOB ACCT#,                                                    JOB08882
+           //    NOTIFY=ST0173,                                                    00020000
+           //    MSGLEVEL=(1,1),LINES=(5,CANCEL)                                   00030000
+         2 //STEP1 EXEC PROC=IGYWCLG                                               00040008
+         3 XXIGYWCLG PROC LNGPRFX='IGY420',SYSLBLK=3200,                           00001001
+           XX             LIBPRFX='CEE',GOPGM=GO                                   00002000
+           XX*                                                                     00003000
+           XX********************************************************************* 00004000
+           XX*                                                                   * 00005000
+           XX*  Enterprise COBOL for z/OS                                        * 00006000
+           XX*               Version 4 Release 1 Modification 0                  * 00007000
+           XX*                                                                   * 00008000
+           XX*  LICENSED MATERIALS - PROPERTY OF IBM.                            * 00009000
+           XX*                                                                   * 00010000
+           XX*  5655-S71 ¸ COPYRIGHT IBM CORP. 1991, 2007                        * 00011000
+           XX*  ALL RIGHTS RESERVED                                              * 00012000
+           XX*                                                                   * 00013000
+           XX*  US GOVERNMENT USERS RESTRICTED RIGHTS - USE,                     * 00014000
+           XX*  DUPLICATION OR DISCLOSURE RESTRICTED BY GSA                      * 00015000
+           XX*  ADP SCHEDULE CONTRACT WITH IBM CORP.                             * 00016000
+           XX*                                                                   * 00017000
+           XX********************************************************************* 00018000
+           XX*                                                                     00019000
+           XX*  COMPILE, LINK EDIT AND RUN A COBOL PROGRAM                         00020000
+           XX*                                                                     00021000
+           XX*  PARAMETER  DEFAULT VALUE    USAGE                                  00022000
+           XX*   LNGPRFX   IGY420           PREFIX FOR LANGUAGE DATA SET NAMES     00023001
+           XX*   SYSLBLK   3200             BLKSIZE FOR OBJECT DATA SET            00024000
+           XX*   LIBPRFX   CEE              PREFIX FOR LIBRARY DATA SET NAMES      00025000
+           XX*   GOPGM     GO               MEMBER NAME FOR LOAD MODULE            00026000
+           XX*                                                                     00027000
+           XX*  CALLER MUST SUPPLY //COBOL.SYSIN DD ...                            00028000
+           XX*                                                                     00029000
+           XX*  CALLER MUST ALSO SUPPLY //COBOL.SYSLIB DD ... for COPY statements  00030000
+           XX*                                                                     00031000
+         4 XXCOBOL  EXEC PGM=IGYCRCTL,REGION=0M                                    00032000
+         5 XXSTEPLIB  DD  DSNAME=&LNGPRFX..SIGYCOMP,                               00033000
+           XX             DISP=SHR                                                 00034000
+           IEFC653I SUBSTITUTION JCL - DSNAME=IGY420.SIGYCOMP,DISP=SHR
+         6 XXSYSPRINT DD  SYSOUT=*                                                 00035000
+         7 XXSYSLIN   DD  DSNAME=&&LOADSET,UNIT=SYSALLDA,                          00036000
+           XX             DISP=(MOD,PASS),SPACE=(TRK,(3,3)),                       00037000
+           XX             DCB=(BLKSIZE=&SYSLBLK)                                   00038000
+           IEFC653I SUBSTITUTION JCL - DSNAME=&&LOADSET,UNIT=SYSALLDA,DISP=(MOD,PASS),SPACE=(TRK,(3,3)),
+           DCB=(BLKSIZE=3200)
+         8 XXSYSUT1   DD  UNIT=SYSALLDA,SPACE=(CYL,(1,1))                          00039000
+         9 XXSYSUT2   DD  UNIT=SYSALLDA,SPACE=(CYL,(1,1))                          00040000
+        10 XXSYSUT3   DD  UNIT=SYSALLDA,SPACE=(CYL,(1,1))                          00041000
+        11 XXSYSUT4   DD  UNIT=SYSALLDA,SPACE=(CYL,(1,1))                          00042000
+        12 XXSYSUT5   DD  UNIT=SYSALLDA,SPACE=(CYL,(1,1))                          00043000
+        13 XXSYSUT6   DD  UNIT=SYSALLDA,SPACE=(CYL,(1,1))                          00044000
+        14 XXSYSUT7   DD  UNIT=SYSALLDA,SPACE=(CYL,(1,1))                          00045000
+        15 //COBOL.SYSIN DD DSN=ST0173.COBOL(HW3COBOL),DISP=SHR                    00050010
+        16 XXLKED   EXEC PGM=HEWL,COND=(8,LT,COBOL),REGION=0M                      00046000
+        17 XXSYSLIB   DD  DSNAME=&LIBPRFX..SCEELKED,                               00047000
+           XX             DISP=SHR                                                 00048000
+           IEFC653I SUBSTITUTION JCL - DSNAME=CEE.SCEELKED,DISP=SHR
+        18 XXSYSPRINT DD  SYSOUT=*                                                 00049000
+        19 XXSYSLIN   DD  DSNAME=&&LOADSET,DISP=(OLD,DELETE)                       00050000
+        20 XX         DD  DDNAME=SYSIN                                             00051000
+        21 XXSYSLMOD  DD  DSNAME=&&GOSET(&GOPGM),SPACE=(TRK,(10,10,1)),            00052000
+           XX             UNIT=SYSALLDA,DISP=(MOD,PASS)                            00053000
+           IEFC653I SUBSTITUTION JCL - DSNAME=&&GOSET(GO),SPACE=(TRK,(10,10,1)),UNIT=SYSALLDA,DISP=(MOD,PASS)
+        22 XXSYSUT1   DD  UNIT=SYSALLDA,SPACE=(TRK,(10,10))                        00054000
+        23 XXGO     EXEC PGM=*.LKED.SYSLMOD,COND=((8,LT,COBOL),(4,LT,LKED)),       00055000
+           XX             REGION=0M                                                00056000
+        24 XXSTEPLIB  DD  DSNAME=&LIBPRFX..SCEERUN,                                00057000
+           XX             DISP=SHR                                                 00058000
+           IEFC653I SUBSTITUTION JCL - DSNAME=CEE.SCEERUN,DISP=SHR
+        25 XXSYSPRINT DD  SYSOUT=*                                                 00059000
+        26 XXCEEDUMP  DD  SYSOUT=*                                                 00060000
+        27 XXSYSUDUMP DD  SYSOUT=*                                                 00061000
+        28 //GO.FILEIN DD DSN=ST0173.DATA(STRINGDA),DISP=SHR                       00060009
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY SVTSC.PROCLIB
+        23 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED 
+ ICH70001I ST0173   LAST ACCESS AT 20:24:51 ON SATURDAY, DECEMBER 5, 2015
+ IEF236I ALLOC. FOR ST01731 COBOL STEP1
+ IEF237I 881D ALLOCATED TO STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSLIN   DATACLAS (        )
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSUT1   DATACLAS (        )
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSUT2   DATACLAS (        )
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSUT3   DATACLAS (        )
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSUT4   DATACLAS (        )
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSUT5   DATACLAS (        )
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSUT6   DATACLAS (        )
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSUT7   DATACLAS (        )
+ IEF237I 860E ALLOCATED TO SYSIN
+ IEF142I ST01731 COBOL STEP1 - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IGY420.SIGYCOMP                              KEPT          
+ IEF285I   VOL SER NOS= VTIGYG.                            
+ IEF285I   ST0173.ST01731.JOB08882.D0000101.?           SYSOUT        
+ IEF285I   SYS15339.T202538.RA000.ST01731.LOADSET.H01   PASSED        
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.R0109945      DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.R0109946      DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.R0109947      DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.R0109948      DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.R0109949      DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.R0109950      DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.R0109951      DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   ST0173.COBOL                                 KEPT          
+ IEF285I   VOL SER NOS= VPD91C.                            
+ IEF373I STEP/COBOL   /START 2015339.2025
+ IEF032I STEP/COBOL   /STOP  2015339.2025 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:  7920K  SYS:   268K  EXT:  1672120K  SYS:    11232K
+ IEF236I ALLOC. FOR ST01731 LKED STEP1
+ IEF237I 8A0B ALLOCATED TO SYSLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I 8A05 ALLOCATED TO SYSLIN
+ IEF237I DMY  ALLOCATED TO 
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSLMOD  DATACLAS (        )
+ IGD100I 8A05 ALLOCATED TO DDNAME SYSUT1   DATACLAS (        )
+ IEF142I ST01731 LKED STEP1 - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   CEE.SCEELKED                                 KEPT          
+ IEF285I   VOL SER NOS= VTMVSC.                            
+ IEF285I   ST0173.ST01731.JOB08882.D0000102.?           SYSOUT        
+ IEF285I   SYS15339.T202538.RA000.ST01731.LOADSET.H01   DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.GOSET.H01     PASSED        
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.R0109952      DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF373I STEP/LKED    /START 2015339.2025
+ IEF032I STEP/LKED    /STOP  2015339.2025 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   104K  SYS:   256K  EXT:     1768K  SYS:    11244K
+ IEF236I ALLOC. FOR ST01731 GO STEP1
+ IEF237I 8A05 ALLOCATED TO PGM=*.DD
+ IEF237I 8A0B ALLOCATED TO STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO CEEDUMP
+ IEF237I JES2 ALLOCATED TO SYSUDUMP
+ IEF237I 8605 ALLOCATED TO FILEIN
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF285I   ST0173.ST01731.JOB08882.D0000106.?           SYSOUT        
+ IEF142I ST01731 GO STEP1 - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   SYS15339.T202538.RA000.ST01731.GOSET.H01     KEPT          
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   CEE.SCEERUN                                  KEPT          
+ IEF285I   VOL SER NOS= VTMVSC.                            
+ IEF285I   ST0173.ST01731.JOB08882.D0000103.?           SYSOUT        
+ IEF285I   ST0173.ST01731.JOB08882.D0000104.?           SYSOUT        
+ IEF285I   ST0173.ST01731.JOB08882.D0000105.?           SYSOUT        
+ IEF285I   ST0173.DATA                                  KEPT          
+ IEF285I   VOL SER NOS= VPMVSC.                            
+ IEF373I STEP/GO      /START 2015339.2025
+ IEF032I STEP/GO      /STOP  2015339.2025 
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+         VIRT:   116K  SYS:   248K  EXT:     2988K  SYS:    11256K
+ IEF237I 8A05 ALLOCATED TO SYS00001
+ IEF285I   SYS15339.T202540.RA000.ST01731.R0109953      KEPT          
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF285I   SYS15339.T202538.RA000.ST01731.GOSET.H01     DELETED       
+ IEF285I   VOL SER NOS= VTW70D.                            
+ IEF375I  JOB/ST01731 /START 2015339.2025
+ IEF033I  JOB/ST01731 /STOP  2015339.2025 
+         CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC    
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 12/05/2015  Time 20:25:39   Page     1                
+0Options in effect:                                                                                                                  
+  NOADATA                                                                                                                            
+    ADV                                                                                                                              
+    QUOTE                                                                                                                            
+    ARITH(COMPAT)                                                                                                                    
+  NOAWO                                                                                                                              
+  NOBLOCK0                                                                                                                           
+    BUFSIZE(4096)                                                                                                                    
+  NOCICS                                                                                                                             
+    CODEPAGE(1140)                                                                                                                   
+  NOCOMPILE(S)                                                                                                                       
+  NOCURRENCY                                                                                                                         
+    DATA(31)                                                                                                                         
+  NODATEPROC                                                                                                                         
+    DBCS                                                                                                                             
+  NODECK                                                                                                                             
+  NODIAGTRUNC                                                                                                                        
+  NODLL                                                                                                                              
+  NODUMP                                                                                                                             
+  NODYNAM                                                                                                                            
+  NOEXIT                                                                                                                             
+  NOEXPORTALL                                                                                                                        
+  NOFASTSRT                                                                                                                          
+    FLAG(I,I)                                                                                                                        
+  NOFLAGSTD                                                                                                                          
+    INTDATE(ANSI)                                                                                                                    
+    LANGUAGE(EN)                                                                                                                     
+  NOLIB                                                                                                                              
+    LINECOUNT(60)                                                                                                                    
+  NOLIST                                                                                                                             
+  NOMAP                                                                                                                              
+  NOMDECK                                                                                                                            
+  NONAME                                                                                                                             
+    NSYMBOL(NATIONAL)                                                                                                                
+  NONUMBER                                                                                                                           
+    NUMPROC(NOPFD)                                                                                                                   
+    OBJECT                                                                                                                           
+  NOOFFSET                                                                                                                           
+  NOOPTIMIZE                                                                                                                         
+    OUTDD(SYSOUT)                                                                                                                    
+    PGMNAME(COMPAT)                                                                                                                  
+    RENT                                                                                                                             
+    RMODE(AUTO)                                                                                                                      
+    SEQUENCE                                                                                                                         
+    SIZE(MAX)                                                                                                                        
+    SOURCE                                                                                                                           
+    SPACE(1)                                                                                                                         
+  NOSQL                                                                                                                              
+    SQLCCSID                                                                                                                         
+  NOSSRANGE                                                                                                                          
+  NOTERM                                                                                                                             
+  NOTEST                                                                                                                             
+  NOTHREAD                                                                                                                           
+    TRUNC(STD)                                                                                                                       
+  NOVBREF                                                                                                                            
+  NOWORD                                                                                                                             
+    XMLPARSE(XMLSS)                                                                                                                  
+    XREF(FULL)                                                                                                                       
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 12/05/2015  Time 20:25:39   Page     2                
+0   YEARWINDOW(1900)                                                                                                                 
+    ZWB                                                                                                                              
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ST0173    Date 12/05/2015  Time 20:25:39   Page     3                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000001         000100   IDENTIFICATION DIVISION.                                       00010001                                   
+   000002         000200   PROGRAM-ID. ST0173.                                            00020006                                   
+   000003         000210   AUTHOR. XUEMENGDI.                                             00021006                                   
+   000004         000220           STUDENT-NUMBER. 1353010.                               00022024                                   
+   000005         000300   ENVIRONMENT DIVISION.                                          00030000                                   
+   000006         000310   INPUT-OUTPUT SECTION.                                          00031014                                   
+   000007         000320   FILE-CONTROL.                                                  00032014                                   
+   000008         000330     SELECT IN-FILE ASSIGN TO FILEIN.                             00033029 12                                
+   000009         000370*                                                                 00037044                                   
+   000010         000400   DATA DIVISION.                                                 00040000                                   
+   000011         000410   FILE SECTION.                                                  00041016                                   
+   000012         000420   FD IN-FILE                                                     00042016                                   
+   000013         000430     RECORDING MODE IS F                                          00043032                                   
+   000014         000431     RECORD CONTAINS 80 CHARACTERS                                00043135                                   
+   000015         000432     DATA RECORD IS IN-FILE-RECORD.                               00043231 *                                 
+   000016         000440   01 IN-FILE-RECORD.                                             00044041                                   
+   000017         000441      05 RECORD-TITLE PIC X(73).                                  00044171                                   
+   000018         000442      05 RECORD-CONTENT PIC X(7).                                 00044271                                   
+   000019         000443   WORKING-STORAGE SECTION.                                       00044304                                   
+   000020         000444   01 STRING-RECORD PIC X(80).                                    00044437                                   
+   000021         000445   01 ONE-WORD.                                                   00044545                                   
+   000022         000446      05 FIRST-CHAR PIC X(1).                                     00044645                                   
+   000023         000447      05 SECOND-CHAR PIC X(72).                                   00044772                                   
+   000024         000448   77 STR-POINTER PIC 99 VALUE 1.                                 00044857                                   
+   000025         000449      88 STR-END VALUE 74.                                        00044991                                   
+   000026         000450   77 PUNC-POINTER PIC 99 VALUE 1.                                00045091                                   
+   000027         000451      88 PUNC-END VALUE 74.                                       00045191                                   
+   000028         000452   01 GENERATE-DATE.                                              00045207                                   
+   000029         000460      05 GENE-YEAR PIC 9(4).                                      00046004                                   
+   000030         000470      05 GENE-MONTH PIC 9(2).                                     00047004                                   
+   000031         000480      05 GENE-DAY PIC 9(2).                                       00048004                                   
+   000032         000490      05 GENE-HOUR PIC 9(2).                                      00049004                                   
+   000033         000491      05 GENE-MINUTE PIC 9(2).                                    00049104                                   
+   000034         000492   01 STR-COUNT.                                                  00049248                                   
+   000035         000493      05 WORD-COUNT PIC 9(3) VALUE 0.                             00049349                                   
+   000036         000494      05 THE-COUNT PIC 9(3) VALUE 0.                              00049449                                   
+   000037         000495      05 FIVE-COUNT PIC 9(3) VALUE 0.                             00049549                                   
+   000038         000496      05 PALI-COUNT PIC 9(3) VALUE 0.                             00049649                                   
+   000039         000497      05 PUNC-COUNT PIC 9(3) VALUE 0.                             00049786                                   
+   000040         000499   01 WORD-AFTER PIC X(72).                                       00049981                                   
+   000041         000500   01 PALINDROME-WORD PIC X(72).                                  00050084                                   
+   000042         000501   01 EMPTY-WORD PIC X(72).                                       00050184                                   
+   000043         000502   01 PALI-WORD-AFTER PIC X(72).                                  00050284                                   
+   000044         000503   01 FIVE-WORD.                                                  00050386                                   
+   000045         000504      05 FOUR-WORD PIC X(4).                                      00050486                                   
+   000046         000505      05 FIFTH-CHAR PIC X(1).                                     00050586                                   
+   000047         000506      05 SIXTH-CHAR PIC X(1).                                     00050686                                   
+   000048         000507      05 ELSE-WORD PIC X(66).                                     00050786                                   
+   000049         000508   01 PUNCTUATION PIC X(1).                                       00050891                                   
+   000050         000509*                                                                 00050944                                   
+   000051         000510   PROCEDURE DIVISION.                                            00051000                                   
+   000052         000511*                                                                 00051145                                   
+   000053         000512* READ FILE AND COUNT                                             00051245                                   
+   000054         000513*                                                                 00051345                                   
+   000055         000514   BEGIN.                                                         00051424                                   
+   000056         000515     OPEN INPUT IN-FILE.                                          00051516 12                                
+   000057         000516     READ IN-FILE                                                 00051638 12                                
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ST0173    Date 12/05/2015  Time 20:25:39   Page     4                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000058      1  000517       AT END MOVE HIGH-VALUES TO IN-FILE-RECORD                  00051739 IMP 16                            
+   000059         000518     END-READ.                                                    00051830                                   
+   000060         000519     MOVE IN-FILE-RECORD TO STRING-RECORD.                        00051940 16 20                             
+   000061         000520     PERFORM 100-PROCESS-RECORDS                                  00052041 97                                
+   000062         000521       UNTIL RECORD-TITLE = HIGH-VALUES.                          00052142 17 IMP                            
+   000063         000523     CLOSE IN-FILE.                                               00052324 12                                
+   000064         000524*                                                                 00052445                                   
+   000065         000530* PRINT QUIZ, NAME AND NUMBER                                     00053025                                   
+   000066         000540*                                                                 00054045                                   
+   000067         000600     DISPLAY "QUIZ 0,1,2,3,4".                                    00060098                                   
+   000068         000601     DISPLAY " ".                                                 00060198                                   
+   000069         000610     DISPLAY "STUDENT NAME: XUEMENGDI".                           00061012                                   
+   000070         000620     DISPLAY "STUDENT NUMBER: 1353010".                           00062012                                   
+   000071         000621     DISPLAY " ".                                                 00062198                                   
+   000072         000622     DISPLAY "ANSWER OF QUIZ 0:".                                 00062265                                   
+   000073         000623     DISPLAY "THERE ARE ", WORD-COUNT, " WORDS.".                 00062398 35                                
+   000074         000624     DISPLAY " ".                                                 00062498                                   
+   000075         000625     DISPLAY "ANSWER OF QUIZ 1:".                                 00062582                                   
+   000076         000626     DISPLAY "THERE ARE ", THE-COUNT, " 'THE'.".                  00062698 36                                
+   000077         000627     DISPLAY " ".                                                 00062798                                   
+   000078         000628     DISPLAY "ANSWER OF QUIZ 2:".                                 00062885                                   
+   000079         000629     DISPLAY "THERE ARE ", PALI-COUNT, " PALINDORME WORDS.".      00062986 38                                
+   000080         000630     DISPLAY " ".                                                 00063098                                   
+   000081         000631     DISPLAY "ANSWER OF QUIZ 3:".                                 00063186                                   
+   000082         000632     DISPLAY "THERE ARE ", FIVE-COUNT, " FIVE-LETTERS WORDS.".    00063286 37                                
+   000083         000633     DISPLAY " ".                                                 00063398                                   
+   000084         000634     DISPLAY "ANSWER OF QUIZ 4:".                                 00063486                                   
+   000085         000635     DISPLAY "THERE ARE ", PUNC-COUNT, " PUNCTUATIONS.".          00063586 39                                
+   000086         000636*                                                                 00063645                                   
+   000087         000637* PRINT DATE                                                      00063712                                   
+   000088         000640*                                                                 00064045                                   
+   000089         000650     MOVE FUNCTION CURRENT-DATE TO GENERATE-DATE.                 00065011 IFN 28                            
+   000090         000660     DISPLAY " ".                                                 00066098                                   
+   000091         000670     DISPLAY "GENERATE TIME: ", GENE-YEAR, "/", GENE-MONTH, "/",  00067098 29 30                             
+   000092         000680             GENE-DAY, " ", GENE-HOUR, ":", GENE-MINUTE.          00068012 31 32 33                          
+   000093         000700     STOP RUN.                                                    00070000                                   
+   000094         000710*                                                                 00071045                                   
+   000095         000720* READ FILE PROCESS                                               00072045                                   
+   000096         000730*                                                                 00073045                                   
+   000097         000800   100-PROCESS-RECORDS.                                           00080041                                   
+   000098         000810     MOVE 1 TO STR-POINTER                                        00081069 24                                
+   000099         000820     MOVE 1 TO PUNC-POINTER                                       00082096 26                                
+   000100         000900     MOVE RECORD-TITLE TO STRING-RECORD                           00090069 17 20                             
+   000101         000920     PERFORM UNTIL STR-END                                        00092091 25                                
+   000102      1  000930       UNSTRING STRING-RECORD                                     00093057 20                                
+   000103      1  000940         DELIMITED BY " "                                         00094059                                   
+   000104      1  000950         INTO ONE-WORD                                            00095045 21                                
+   000105      1  000960         WITH POINTER STR-POINTER                                 00096058 24                                
+   000106      1  000970       END-UNSTRING                                               00097069                                   
+   000107         000980*    QUIZ 0                                                       00098083                                   
+   000108      1  000982       IF FIRST-CHAR NOT EQUAL TO " "                             00098280 22                                
+   000109      2  000986          COMPUTE WORD-COUNT = WORD-COUNT + 1                     00098666 35 35                             
+   000110      1  000987       END-IF                                                     00098769                                   
+   000111         000988*    REMOVE THE SIGN IN THE STRING                                00098883                                   
+   000112      1  000989       IF FIRST-CHAR EQUAL TO '"' OR FIRST-CHAR EQUAL TO '('      00098981 22 22                             
+   000113      2  000990          UNSTRING SECOND-CHAR                                    00099081 23                                
+   000114      2  000991             DELIMITED BY ')' OR '.' OR '"' OR ','                00099181                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ST0173    Date 12/05/2015  Time 20:25:39   Page     5                
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000115      2  000992             INTO WORD-AFTER                                      00099281 40                                
+   000116      2  000993          END-UNSTRING                                            00099381                                   
+   000117      1  000994       ELSE                                                       00099481                                   
+   000118      2  000995          UNSTRING ONE-WORD                                       00099581 21                                
+   000119      2  000996             DELIMITED BY ')' OR '.' OR '"' OR ','                00099681                                   
+   000120      2  000997             INTO WORD-AFTER                                      00099781 40                                
+   000121      2  000998          END-UNSTRING                                            00099881                                   
+   000122      1  000999       END-IF                                                     00099981                                   
+   000123         001000*    QUIZ 1                                                       00100083                                   
+   000124      1  001001       IF FUNCTION UPPER-CASE(WORD-AFTER) EQUAL TO "THE"          00100182 IFN 40                            
+   000125      2  001002          COMPUTE THE-COUNT = THE-COUNT + 1                       00100282 36 36                             
+   000126         001003*         DISPLAY WORD-AFTER                                      00100386                                   
+   000127      1  001004       END-IF                                                     00100482                                   
+   000128         001005*    QUIZ 2                                                       00100583                                   
+   000129      1  001006       MOVE FUNCTION REVERSE(WORD-AFTER) TO PALINDROME-WORD       00100683 IFN 40 41                         
+   000130      1  001007       UNSTRING PALINDROME-WORD                                   00100783 41                                
+   000131      1  001008          DELIMITED BY ALL SPACES                                 00100883 IMP                               
+   000132      1  001009          INTO EMPTY-WORD, PALI-WORD-AFTER                        00100983 42 43                             
+   000133      1  001010       END-UNSTRING                                               00101083                                   
+   000134      1  001013       IF WORD-AFTER EQUAL TO PALI-WORD-AFTER                     00101383 40 43                             
+   000135      2  001014          COMPUTE PALI-COUNT = PALI-COUNT + 1                     00101483 38 38                             
+   000136      1  001016       END-IF                                                     00101683                                   
+   000137         001017*    QUIZ 3                                                       00101786                                   
+   000138      1  001018       MOVE WORD-AFTER TO FIVE-WORD                               00101887 40 44                             
+   000139      1  001023       IF SIXTH-CHAR EQUAL TO " "                                 00102388 47                                
+   000140      2  001025          IF FIFTH-CHAR NOT EQUAL TO " "                          00102588 46                                
+   000141      3  001026             COMPUTE FIVE-COUNT = FIVE-COUNT + 1                  00102686 37 37                             
+   000142      2  001029          END-IF                                                  00102986                                   
+   000143      1  001030       END-IF                                                     00103086                                   
+   000144         001031*    QUIZ 4                                                       00103186                                   
+   000145      1  001032       PERFORM UNTIL PUNC-END                                     00103291 27                                
+   000146      2  001033          UNSTRING STRING-RECORD                                  00103395 20                                
+   000147      2  001034             INTO PUNCTUATION                                     00103491 49                                
+   000148      2  001035             WITH POINTER PUNC-POINTER                            00103591 26                                
+   000149      2  001036          END-UNSTRING                                            00103691                                   
+   000150      2  001038          IF PUNCTUATION = '(' OR ')' OR ',' OR '.' OR '-' OR '"' 00103891 49                                
+   000151      3  001040             COMPUTE PUNC-COUNT = PUNC-COUNT + 1                  00104091 39 39                             
+   000152      2  001041          END-IF                                                  00104191                                   
+   000153      1  001042       END-PERFORM                                                00104291                                   
+   000154         001043*    QUIZ END                                                     00104391                                   
+   000155         001044     END-PERFORM                                                  00104469                                   
+   000156         001050     READ IN-FILE                                                 00105041 12                                
+   000157      1  001100          AT END MOVE HIGH-VALUES TO IN-FILE-RECORD               00110041 IMP 16                            
+   000158         001200     END-READ.                                                    00120074                                   
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ST0173    Date 12/05/2015  Time 20:25:39   Page     6                
+0An "M" preceding a data-name reference indicates that the data-name is modified by this reference.                                  
+                                                                                                                                     
+  Defined   Cross-reference of data names   References                                                                               
+                                                                                                                                     
+       48   ELSE-WORD                                                                                                                
+       42   EMPTY-WORD . . . . . . . . . .  M132                                                                                     
+       46   FIFTH-CHAR . . . . . . . . . .  140                                                                                      
+       22   FIRST-CHAR . . . . . . . . . .  108 112 112                                                                              
+       37   FIVE-COUNT . . . . . . . . . .  82 M141 141                                                                              
+       44   FIVE-WORD. . . . . . . . . . .  M138                                                                                     
+       45   FOUR-WORD                                                                                                                
+       31   GENE-DAY . . . . . . . . . . .  92                                                                                       
+       32   GENE-HOUR. . . . . . . . . . .  92                                                                                       
+       33   GENE-MINUTE. . . . . . . . . .  92                                                                                       
+       30   GENE-MONTH . . . . . . . . . .  91                                                                                       
+       29   GENE-YEAR. . . . . . . . . . .  91                                                                                       
+       28   GENERATE-DATE. . . . . . . . .  M89                                                                                      
+       12   IN-FILE. . . . . . . . . . . .  8 56 57 63 156                                                                           
+       16   IN-FILE-RECORD . . . . . . . .  M58 60 M157                                                                              
+       21   ONE-WORD . . . . . . . . . . .  M104 118                                                                                 
+       38   PALI-COUNT . . . . . . . . . .  79 M135 135                                                                              
+       43   PALI-WORD-AFTER. . . . . . . .  M132 134                                                                                 
+       41   PALINDROME-WORD. . . . . . . .  M129 130                                                                                 
+       39   PUNC-COUNT . . . . . . . . . .  85 M151 151                                                                              
+       27   PUNC-END . . . . . . . . . . .  145                                                                                      
+       26   PUNC-POINTER . . . . . . . . .  M99 M148                                                                                 
+       49   PUNCTUATION. . . . . . . . . .  M147 150                                                                                 
+       18   RECORD-CONTENT                                                                                                           
+       17   RECORD-TITLE . . . . . . . . .  62 100                                                                                   
+       23   SECOND-CHAR. . . . . . . . . .  113                                                                                      
+       47   SIXTH-CHAR . . . . . . . . . .  139                                                                                      
+       34   STR-COUNT                                                                                                                
+       25   STR-END. . . . . . . . . . . .  101                                                                                      
+       24   STR-POINTER. . . . . . . . . .  M98 M105                                                                                 
+       20   STRING-RECORD. . . . . . . . .  M60 M100 102 146                                                                         
+       36   THE-COUNT. . . . . . . . . . .  76 M125 125                                                                              
+       40   WORD-AFTER . . . . . . . . . .  M115 M120 124 129 134 138                                                                
+       35   WORD-COUNT . . . . . . . . . .  73 M109 109                                                                              
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ST0173    Date 12/05/2015  Time 20:25:39   Page     7                
+0Context usage is indicated by the letter preceding a procedure-name reference.                                                      
+ These letters and their meanings are:                                                                                               
+     A = ALTER (procedure-name)                                                                                                      
+     D = GO TO (procedure-name) DEPENDING ON                                                                                         
+     E = End of range of (PERFORM) through (procedure-name)                                                                          
+     G = GO TO (procedure-name)                                                                                                      
+     P = PERFORM (procedure-name)                                                                                                    
+     T = (ALTER) TO PROCEED TO (procedure-name)                                                                                      
+     U = USE FOR DEBUGGING (procedure-name)                                                                                          
+                                                                                                                                     
+  Defined   Cross-reference of procedures   References                                                                               
+                                                                                                                                     
+       55   BEGIN                                                                                                                    
+       97   100-PROCESS-RECORDS. . . . . .  P61                                                                                      
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               ST0173    Date 12/05/2015  Time 20:25:39   Page     8                
+0 Defined   Cross-reference of programs     References                                                                               
+                                                                                                                                     
+        2   ST0173                                                                                                                   
+-* Statistics for COBOL program ST0173:                                                                                              
+ *    Source records = 158                                                                                                           
+ *    Data Division statements = 33                                                                                                  
+ *    Procedure Division statements = 55                                                                                             
+0End of compilation 1,  program ST0173,  no statements flagged.                                                                      
+0Return code 0                                                                                                                       
+1z/OS V1 R13 BINDER     20:25:39 SATURDAY DECEMBER  5, 2015                                                              
+ BATCH EMULATOR  JOB(ST01731 ) STEP(STEP1   ) PGM= HEWL      PROCEDURE(LKED    )                                         
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+                                 *** O P E R A T I O N   S U M M A R Y   R E P O R T ***                                 
+                                                                                                                         
+1PROCESSING OPTIONS:                                                                                                     
+                                                                                                                         
+    ALIASES             NO                                                                                               
+    ALIGN2              NO                                                                                               
+    AMODE               UNSPECIFIED                                                                                      
+    CALL                YES                                                                                              
+    CASE                UPPER                                                                                            
+    COMPAT              UNSPECIFIED                                                                                      
+    COMPRESS            AUTO                                                                                             
+    DCBS                NO                                                                                               
+    DYNAM               NO                                                                                               
+    EXTATTR             UNSPECIFIED                                                                                      
+    EXITS:              NONE                                                                                             
+    FILL                NONE                                                                                             
+    GID                 UNSPECIFIED                                                                                      
+    HOBSET              NO                                                                                               
+    INFO                NO                                                                                               
+    LET                 04                                                                                               
+    LINECT              060                                                                                              
+    LIST                SUMMARY                                                                                          
+    LISTPRIV            NO                                                                                               
+    MAP                 NO                                                                                               
+    MAXBLK              032760                                                                                           
+    MODMAP              NO                                                                                               
+    MSGLEVEL            00                                                                                               
+    OVLY                NO                                                                                               
+    PRINT               YES                                                                                              
+    RES                 NO                                                                                               
+    REUSABILITY         UNSPECIFIED                                                                                      
+    RMODE               UNSPECIFIED                                                                                      
+    SIGN                NO                                                                                               
+    STORENX             NOREPLACE                                                                                        
+    STRIPCL             NO                                                                                               
+    STRIPSEC            NO                                                                                               
+    TERM                NO                                                                                               
+    TRAP                ON                                                                                               
+    UID                 UNSPECIFIED                                                                                      
+    UPCASE              NO                                                                                               
+    WKSPACE             000000K,000000K                                                                                  
+    XCAL                NO                                                                                               
+    XREF                NO                                                                                               
+    ***END OF OPTIONS***                                                                                                 
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+1SAVE OPERATION SUMMARY:                                                                                                 
+                                                                                                                         
+    MEMBER NAME         GO                                                                                               
+    LOAD LIBRARY        SYS15339.T202538.RA000.ST01731.GOSET.H01                                                         
+    PROGRAM TYPE        LOAD MODULE                                                                                      
+    VOLUME SERIAL       VTW70D                                                                                           
+    MAX BLOCK           32760                                                                                            
+    DISPOSITION         ADDED NEW                                                                                        
+    TIME OF SAVE        20.25.40  DEC  5, 2015                                                                           
+                                                                                                                         
+                                                                                                                         
+1SAVE MODULE ATTRIBUTES:                                                                                                 
+                                                                                                                         
+    AC                  000                                                                                              
+    AMODE                31                                                                                              
+    COMPRESSION         NONE                                                                                             
+    DC                  NO                                                                                               
+    EDITABLE            YES                                                                                              
+    EXCEEDS 16MB        NO                                                                                               
+    EXECUTABLE          YES                                                                                              
+    MIGRATABLE          YES                                                                                              
+    OL                  NO                                                                                               
+    OVLY                NO                                                                                               
+    PACK,PRIME          NO,NO                                                                                            
+    PAGE ALIGN          NO                                                                                               
+    REFR                NO                                                                                               
+    RENT                NO                                                                                               
+    REUS                NO                                                                                               
+    RMODE               ANY                                                                                              
+    SCTR                NO                                                                                               
+    SIGN                NO                                                                                               
+    SSI                                                                                                                  
+    SYM GENERATED       NO                                                                                               
+    TEST                NO                                                                                               
+    XPLINK              NO                                                                                               
+    MODULE SIZE (HEX)   00001E80                                                                                         
+                                                                                                                         
+                                                                                                                         
+1 ENTRY POINT AND ALIAS SUMMARY:                                                                                         
+                                                                                                                         
+  NAME:            ENTRY TYPE AMODE C_OFFSET CLASS NAME        STATUS                                                    
+                                                                                                                         
+  ST0173            MAIN_EP      31 00000000 B_TEXT                                                                      
+                                                                                                                         
+                          *** E N D   O F   O P E R A T I O N   S U M M A R Y   R E P O R T ***                          
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+1z/OS V1 R13 BINDER     20:25:39 SATURDAY DECEMBER  5, 2015                                                              
+ BATCH EMULATOR  JOB(ST01731 ) STEP(STEP1   ) PGM= HEWL      PROCEDURE(LKED    )                                         
+ IEW2008I 0F03 PROCESSING COMPLETED.  RETURN CODE =  0.                                                                  
+                                                                                                                         
+                                                                                                                         
+                                                                                                                         
+1----------------------                                                                                                  
+ MESSAGE SUMMARY REPORT                                                                                                  
+ ----------------------                                                                                                  
+  TERMINAL MESSAGES      (SEVERITY = 16)                                                                                 
+  NONE                                                                                                                   
+                                                                                                                         
+  SEVERE MESSAGES        (SEVERITY = 12)                                                                                 
+  NONE                                                                                                                   
+                                                                                                                         
+  ERROR MESSAGES         (SEVERITY = 08)                                                                                 
+  NONE                                                                                                                   
+                                                                                                                         
+  WARNING MESSAGES       (SEVERITY = 04)                                                                                 
+  NONE                                                                                                                   
+                                                                                                                         
+  INFORMATIONAL MESSAGES (SEVERITY = 00)                                                                                 
+  2008                                                                                                                   
+                                                                                                                         
+                                                                                                                         
+  **** END OF MESSAGE SUMMARY REPORT ****                                                                                
+                                                                                                                         
+ QUIZ 0,1,2,3,4                                                                                                          
+                                                                                                                         
+ STUDENT NAME: XUEMENGDI                                                                                                 
+ STUDENT NUMBER: 1353010                                                                                                 
+                                                                                                                         
+ ANSWER OF QUIZ 0:                                                                                                       
+ THERE ARE 259 WORDS.                                                                                                    
+                                                                                                                         
+ ANSWER OF QUIZ 1:                                                                                                       
+ THERE ARE 007 'THE'.                                                                                                    
+                                                                                                                         
+ ANSWER OF QUIZ 2:                                                                                                       
+ THERE ARE 021 PALINDORME WORDS.                                                                                         
+                                                                                                                         
+ ANSWER OF QUIZ 3:                                                                                                       
+ THERE ARE 026 FIVE-LETTERS WORDS.                                                                                       
+                                                                                                                         
+ ANSWER OF QUIZ 4:                                                                                                       
+ THERE ARE 049 PUNCTUATIONS.                                                                                             
+                                                                                                                         
+ GENERATE TIME: 2015/12/05 20:25                                                                                         

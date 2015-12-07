@@ -1,0 +1,6 @@
+//ST0173 JOB ACCT#,                                                     00010007
+//    NOTIFY=ST0173,                                                    00020000
+//    MSGLEVEL=(1,1),LINES=(5,CANCEL)                                   00030000
+//STEP1 EXEC PROC=IGYWCLG                                               00040008
+//COBOL.SYSIN DD DSN=ST0173.COBOL(HW3COBOL),DISP=SHR                    00050010
+//GO.FILEIN DD DSN=ST0173.DATA(STRINGDA),DISP=SHR                       00060009

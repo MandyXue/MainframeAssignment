@@ -1,0 +1,26 @@
+//ST017364 JOB NOTIFY=ST0173,MSGLEVEL=(1,1)                             00000100
+//PROCA PROC
+//PSTEP1 EXEC PGM=IEBGENER                                              00001000
+//SYSPRINT DD SYSOUT=*                                                  00001100
+//SYSUT1 DD DSN=ST0173.SST0173.TXT2,DISP=SHR                            00001200
+//SYSUT2 DD DSN=&OUTDS,DISP=(NEW,CATLG,DELETE),                         00001300
+//    SPACE=(TRK,(1,1,1)),VOL=SER=VPD91C,                               00001400
+//    RECFM=FB,LRECL=80,UNIT=3390                                       00001500
+//SYSIN DD *                                                            00001600
+  GENERATE MAXNAME=3,MAXGPS=2                                           00001700
+  MEMBER NAME=MEMBER1                                                   00001800
+    RECORD IDENT=(6,'013224',1)                                         00001900
+  MEMBER NAME=MEMBER2                                                   00002000
+    RECORD IDENT=(6,'023218',1)                                         00002100
+  MEMBER NAME=MEMBER3                                                   00002200
+//    PEND
+//STEP1 EXEC PGM=SORT                                                   00000200
+//SORTIN DD DSN=ST0173.EXER.TXT,DISP=SHR                                00000300
+//SORTOUT DD DSN=ST0173.SST0173.TXT2,DISP=(NEW,CATLG,DELETE),           00000310
+//    SPACE=(TRK,(1,1)),VOL=SER=VPD91C,                                 00000400
+//    RECFM=FB,LRECL=80,UNIT=3390                                       00000500
+//SYSOUT DD SYSOUT=*                                                    00000600
+//SYSIN DD *                                                            00000700
+  SORT FIELDS=(1,6,CH,A)                                                00000800
+/*                                                                      00000900
+//STEP2 EXEC PROCA,OUTDS=ST0173.SST0173.P02

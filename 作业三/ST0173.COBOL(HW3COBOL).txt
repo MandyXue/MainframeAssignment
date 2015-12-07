@@ -1,0 +1,158 @@
+000100   IDENTIFICATION DIVISION.                                       00010001
+000200   PROGRAM-ID. ST0173.                                            00020006
+000210   AUTHOR. XUEMENGDI.                                             00021006
+000220           STUDENT-NUMBER. 1353010.                               00022024
+000300   ENVIRONMENT DIVISION.                                          00030000
+000310   INPUT-OUTPUT SECTION.                                          00031014
+000320   FILE-CONTROL.                                                  00032014
+000330     SELECT IN-FILE ASSIGN TO FILEIN.                             00033029
+000370*                                                                 00037044
+000400   DATA DIVISION.                                                 00040000
+000410   FILE SECTION.                                                  00041016
+000420   FD IN-FILE                                                     00042016
+000430     RECORDING MODE IS F                                          00043032
+000431     RECORD CONTAINS 80 CHARACTERS                                00043135
+000432     DATA RECORD IS IN-FILE-RECORD.                               00043231
+000440   01 IN-FILE-RECORD.                                             00044041
+000441      05 RECORD-TITLE PIC X(73).                                  00044171
+000442      05 RECORD-CONTENT PIC X(7).                                 00044271
+000443   WORKING-STORAGE SECTION.                                       00044304
+000444   01 STRING-RECORD PIC X(80).                                    00044437
+000445   01 ONE-WORD.                                                   00044545
+000446      05 FIRST-CHAR PIC X(1).                                     00044645
+000447      05 SECOND-CHAR PIC X(72).                                   00044772
+000448   77 STR-POINTER PIC 99 VALUE 1.                                 00044857
+000449      88 STR-END VALUE 74.                                        00044991
+000450   77 PUNC-POINTER PIC 99 VALUE 1.                                00045091
+000451      88 PUNC-END VALUE 74.                                       00045191
+000452   01 GENERATE-DATE.                                              00045207
+000460      05 GENE-YEAR PIC 9(4).                                      00046004
+000470      05 GENE-MONTH PIC 9(2).                                     00047004
+000480      05 GENE-DAY PIC 9(2).                                       00048004
+000490      05 GENE-HOUR PIC 9(2).                                      00049004
+000491      05 GENE-MINUTE PIC 9(2).                                    00049104
+000492   01 STR-COUNT.                                                  00049248
+000493      05 WORD-COUNT PIC 9(3) VALUE 0.                             00049349
+000494      05 THE-COUNT PIC 9(3) VALUE 0.                              00049449
+000495      05 FIVE-COUNT PIC 9(3) VALUE 0.                             00049549
+000496      05 PALI-COUNT PIC 9(3) VALUE 0.                             00049649
+000497      05 PUNC-COUNT PIC 9(3) VALUE 0.                             00049786
+000499   01 WORD-AFTER PIC X(72).                                       00049981
+000500   01 PALINDROME-WORD PIC X(72).                                  00050084
+000501   01 EMPTY-WORD PIC X(72).                                       00050184
+000502   01 PALI-WORD-AFTER PIC X(72).                                  00050284
+000503   01 FIVE-WORD.                                                  00050386
+000504      05 FOUR-WORD PIC X(4).                                      00050486
+000505      05 FIFTH-CHAR PIC X(1).                                     00050586
+000506      05 SIXTH-CHAR PIC X(1).                                     00050686
+000507      05 ELSE-WORD PIC X(66).                                     00050786
+000508   01 PUNCTUATION PIC X(1).                                       00050891
+000509*                                                                 00050944
+000510   PROCEDURE DIVISION.                                            00051000
+000511*                                                                 00051145
+000512* READ FILE AND COUNT                                             00051245
+000513*                                                                 00051345
+000514   BEGIN.                                                         00051424
+000515     OPEN INPUT IN-FILE.                                          00051516
+000516     READ IN-FILE                                                 00051638
+000517       AT END MOVE HIGH-VALUES TO IN-FILE-RECORD                  00051739
+000518     END-READ.                                                    00051830
+000519     MOVE IN-FILE-RECORD TO STRING-RECORD.                        00051940
+000520     PERFORM 100-PROCESS-RECORDS                                  00052041
+000521       UNTIL RECORD-TITLE = HIGH-VALUES.                          00052142
+000523     CLOSE IN-FILE.                                               00052324
+000524*                                                                 00052445
+000530* PRINT QUIZ, NAME AND NUMBER                                     00053025
+000540*                                                                 00054045
+000600     DISPLAY "QUIZ 0,1,2,3,4".                                    00060098
+000601     DISPLAY " ".                                                 00060198
+000610     DISPLAY "STUDENT NAME: XUEMENGDI".                           00061012
+000620     DISPLAY "STUDENT NUMBER: 1353010".                           00062012
+000621     DISPLAY " ".                                                 00062198
+000622     DISPLAY "ANSWER OF QUIZ 0:".                                 00062265
+000623     DISPLAY "THERE ARE ", WORD-COUNT, " WORDS.".                 00062398
+000624     DISPLAY " ".                                                 00062498
+000625     DISPLAY "ANSWER OF QUIZ 1:".                                 00062582
+000626     DISPLAY "THERE ARE ", THE-COUNT, " 'THE'.".                  00062698
+000627     DISPLAY " ".                                                 00062798
+000628     DISPLAY "ANSWER OF QUIZ 2:".                                 00062885
+000629     DISPLAY "THERE ARE ", PALI-COUNT, " PALINDORME WORDS.".      00062986
+000630     DISPLAY " ".                                                 00063098
+000631     DISPLAY "ANSWER OF QUIZ 3:".                                 00063186
+000632     DISPLAY "THERE ARE ", FIVE-COUNT, " FIVE-LETTERS WORDS.".    00063286
+000633     DISPLAY " ".                                                 00063398
+000634     DISPLAY "ANSWER OF QUIZ 4:".                                 00063486
+000635     DISPLAY "THERE ARE ", PUNC-COUNT, " PUNCTUATIONS.".          00063586
+000636*                                                                 00063645
+000637* PRINT DATE                                                      00063712
+000640*                                                                 00064045
+000650     MOVE FUNCTION CURRENT-DATE TO GENERATE-DATE.                 00065011
+000660     DISPLAY " ".                                                 00066098
+000670     DISPLAY "GENERATE TIME: ", GENE-YEAR, "/", GENE-MONTH, "/",  00067098
+000680             GENE-DAY, " ", GENE-HOUR, ":", GENE-MINUTE.          00068012
+000700     STOP RUN.                                                    00070000
+000710*                                                                 00071045
+000720* READ FILE PROCESS                                               00072045
+000730*                                                                 00073045
+000800   100-PROCESS-RECORDS.                                           00080041
+000810     MOVE 1 TO STR-POINTER                                        00081069
+000820     MOVE 1 TO PUNC-POINTER                                       00082096
+000900     MOVE RECORD-TITLE TO STRING-RECORD                           00090069
+000920     PERFORM UNTIL STR-END                                        00092091
+000930       UNSTRING STRING-RECORD                                     00093057
+000940         DELIMITED BY " "                                         00094059
+000950         INTO ONE-WORD                                            00095045
+000960         WITH POINTER STR-POINTER                                 00096058
+000970       END-UNSTRING                                               00097069
+000980*    QUIZ 0                                                       00098083
+000982       IF FIRST-CHAR NOT EQUAL TO " "                             00098280
+000986          COMPUTE WORD-COUNT = WORD-COUNT + 1                     00098666
+000987       END-IF                                                     00098769
+000988*    REMOVE THE SIGN IN THE STRING                                00098883
+000989       IF FIRST-CHAR EQUAL TO '"' OR FIRST-CHAR EQUAL TO '('      00098981
+000990          UNSTRING SECOND-CHAR                                    00099081
+000991             DELIMITED BY ')' OR '.' OR '"' OR ','                00099181
+000992             INTO WORD-AFTER                                      00099281
+000993          END-UNSTRING                                            00099381
+000994       ELSE                                                       00099481
+000995          UNSTRING ONE-WORD                                       00099581
+000996             DELIMITED BY ')' OR '.' OR '"' OR ','                00099681
+000997             INTO WORD-AFTER                                      00099781
+000998          END-UNSTRING                                            00099881
+000999       END-IF                                                     00099981
+001000*    QUIZ 1                                                       00100083
+001001       IF FUNCTION UPPER-CASE(WORD-AFTER) EQUAL TO "THE"          00100182
+001002          COMPUTE THE-COUNT = THE-COUNT + 1                       00100282
+001003*         DISPLAY WORD-AFTER                                      00100386
+001004       END-IF                                                     00100482
+001005*    QUIZ 2                                                       00100583
+001006       MOVE FUNCTION REVERSE(WORD-AFTER) TO PALINDROME-WORD       00100683
+001007       UNSTRING PALINDROME-WORD                                   00100783
+001008          DELIMITED BY ALL SPACES                                 00100883
+001009          INTO EMPTY-WORD, PALI-WORD-AFTER                        00100983
+001010       END-UNSTRING                                               00101083
+001013       IF WORD-AFTER EQUAL TO PALI-WORD-AFTER                     00101383
+001014          COMPUTE PALI-COUNT = PALI-COUNT + 1                     00101483
+001016       END-IF                                                     00101683
+001017*    QUIZ 3                                                       00101786
+001018       MOVE WORD-AFTER TO FIVE-WORD                               00101887
+001023       IF SIXTH-CHAR EQUAL TO " "                                 00102388
+001025          IF FIFTH-CHAR NOT EQUAL TO " "                          00102588
+001026             COMPUTE FIVE-COUNT = FIVE-COUNT + 1                  00102686
+001029          END-IF                                                  00102986
+001030       END-IF                                                     00103086
+001031*    QUIZ 4                                                       00103186
+001032       PERFORM UNTIL PUNC-END                                     00103291
+001033          UNSTRING STRING-RECORD                                  00103395
+001034             INTO PUNCTUATION                                     00103491
+001035             WITH POINTER PUNC-POINTER                            00103591
+001036          END-UNSTRING                                            00103691
+001038          IF PUNCTUATION = '(' OR ')' OR ',' OR '.' OR '-' OR '"' 00103891
+001040             COMPUTE PUNC-COUNT = PUNC-COUNT + 1                  00104091
+001041          END-IF                                                  00104191
+001042       END-PERFORM                                                00104291
+001043*    QUIZ END                                                     00104391
+001044     END-PERFORM                                                  00104469
+001050     READ IN-FILE                                                 00105041
+001100          AT END MOVE HIGH-VALUES TO IN-FILE-RECORD               00110041
+001200     END-READ.                                                    00120074
