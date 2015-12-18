@@ -1,0 +1,71 @@
+﻿000100   IDENTIFICATION DIVISION.                                       00010000
+000200   PROGRAM-ID. HW4COBOL.                                          00020000
+000300   ENVIRONMENT DIVISION.                                          00030000
+000400   DATA DIVISION.                                                 00040000
+000410   WORKING-STORAGE SECTION.                                       00041001
+000420   01 TODAY-YEAR     PIC 9(4).                                    00042005
+000432   01 TODAY-DAY.                                                  00043208
+000433      05 YEAR-NUMBER PIC 9(2).                                    00043307
+000434      05 DAY-NUMBER  PIC 9(3).                                    00043407
+000435   01 TODAY-WEEK     PIC 9(1).                                    00043501
+000436   01 OBJECT-DAY-NUM PIC 9(3) VALUE 275.                          00043625
+000452   01 OBJECT-WEEK    PIC 9(1).                                    00045205
+000453   01 OBJECT-YEAR    PIC 9(4) VALUE 2016.                         00045321
+000454   01 DAY-DIFFERENCE PIC 9(3).                                    00045409
+000455   01 TEMP.                                                       00045509
+000456      05 TEMP1       PIC 9(3).                                    00045622
+000457      05 TEMP2       PIC 9(3).                                    00045709
+000458      05 TEMP3       PIC 9(3).                                    00045822
+000459      05 TEMP4       PIC 9(3).                                    00045922
+000460      05 TEMP5       PIC 9(3).                                    00046022
+000470      05 TEMP6       PIC 9(3).                                    00047022
+000480   01 DAY-PRINT      PIC 9(2) VALUE 1.                            00048026
+000490   01 WEEK-COUNT     PIC 9(1) VALUE 1.                            00049038
+000491   01 LINE-COUNT     PIC 9(1) VALUE 1.                            00049127
+000492   01 WEEK-LINE.                                                  00049226
+000493      05 DAYS        OCCURS 7 TIMES PIC X(4).                     00049326
+000500   PROCEDURE DIVISION.                                            00050000
+000501*    COUNT TODAY'S YEAR,DAY AND WEEK                              00050109
+000502     ACCEPT TODAY-WEEK FROM DAY-OF-WEEK.                          00050202
+000503     ACCEPT TODAY-DAY FROM DAY.                                   00050305
+000510     MOVE FUNCTION CURRENT-DATE(1:4) TO TODAY-YEAR.               00051006
+000560*    COUNT OBJECTIVE DAY'S WEEK                                   00056026
+000571     COMPUTE TEMP1 = FUNCTION MOD (TODAY-YEAR, 4).                00057122
+000573     IF TEMP1 = 0                                                 00057322
+000580        COMPUTE TEMP2 = (OBJECT-YEAR - TODAY-YEAR) * 366          00058022
+000590     ELSE                                                         00059009
+000591        COMPUTE TEMP2 = (OBJECT-YEAR - TODAY-YEAR) * 365          00059122
+000592     END-IF.                                                      00059209
+000594     COMPUTE DAY-DIFFERENCE = TEMP2 - DAY-NUMBER + OBJECT-DAY-NUM.00059424
+000597     COMPUTE OBJECT-WEEK = FUNCTION MOD (DAY-DIFFERENCE, 7)       00059726
+000598                     + TODAY-WEEK.                                00059822
+000600     IF OBJECT-WEEK = 7                                           00060026
+000601        MOVE 0 TO OBJECT-WEEK                                     00060126
+000602     END-IF.                                                      00060226
+000610     DISPLAY "-------2016 OCTOBER--------".                       00061000
+000700     DISPLAY "SUN MON TUE WED THU FRI SAT".                       00070000
+000701*    PRINT DAYS                                                   00070126
+000710     PERFORM UNTIL DAY-PRINT > 31                                 00071039
+000711        MOVE 1 TO WEEK-COUNT                                      00071137
+000720        PERFORM UNTIL WEEK-COUNT > 7                              00072037
+000721           IF LINE-COUNT = 1                                      00072127
+000730              IF WEEK-COUNT < OBJECT-WEEK + 1                     00073037
+000740                 MOVE SPACES TO DAYS(WEEK-COUNT)                  00074037
+000750              ELSE                                                00075027
+000760                 MOVE DAY-PRINT TO DAYS(WEEK-COUNT)               00076037
+000770                 COMPUTE DAY-PRINT = DAY-PRINT + 1                00077027
+000780              END-IF                                              00078031
+000781           ELSE                                                   00078127
+000783              IF DAY-PRINT < 32                                   00078341
+000784                 MOVE DAY-PRINT TO DAYS(WEEK-COUNT)               00078441
+000785              ELSE                                                00078542
+000786                 MOVE SPACES TO DAYS(WEEK-COUNT)                  00078642
+000787              END-IF                                              00078741
+000788              COMPUTE DAY-PRINT = DAY-PRINT + 1                   00078828
+000789           END-IF                                                 00078931
+000790           COMPUTE WEEK-COUNT = WEEK-COUNT + 1                    00079026
+000793        END-PERFORM                                               00079340
+000795        DISPLAY WEEK-LINE                                         00079540
+000796        COMPUTE LINE-COUNT = LINE-COUNT + 1                       00079627
+000797     END-PERFORM.                                                 00079739
+000800     STOP RUN.                                                    00080000
